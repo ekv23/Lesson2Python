@@ -5,14 +5,14 @@
 
 #пусть N = 4, тогда [ 1, 2, 6, 24 ] (1, 12, 123, 1234)
 
-n = int(input("Ввведите число: "))
+N = int(input("Ввведите число: "))
 
-first_num = 1 
-counter = 0
-while counter < n:
-    counter = counter + 1
-step = counter
-for i in range(n-1):
-    print (first_num, end=", ")
-    first_num = first_num*step
-print(first_num)
+def factorial(n):
+    num = 1
+    numbers = []
+    for i in range (1, n+1):
+        num = num * i
+        numbers.append(num)
+    return numbers
+
+print(f'набор произведений чисел от 1 до N {factorial(N)}')
